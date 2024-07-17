@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Stylesheet.css" />
+    <title></title>
+    
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="#"
+          ><img
+            src="./Img/WhatsApp_Image_2024-07-16_at_7.17.09_PM-removebg.png"
+            class="logo"
+        /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Welcome to <br /><span>Sip and Savor Café</span></h2>
+          <h3> - Your Perfect Brew Awaits!</h3><br>
+          
+          <p>
+            Located in the heart of the city, Sip and Savor Café is easily
+            accessible and open daily .  Come in, sit back, and let us make your
+            day a little brighter with every sip.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="./Img/view-cartoon-male-chef-with-delicious-3d-pizza.png" class="starbucks" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="./Img/funny-3d-illustration-american-referee.png"
+            onclick="imgSlider('./Img/funny-3d-illustration-american-referee.png'); changeCircleColor('#f5a623');"
+          />
+        </li>
+        <li>
+          <img
+            src="./Img/3d-illustration-cartoon-man-historical-baroque-costume.png"
+            onclick="imgSlider('./Img/3d-illustration-cartoon-man-historical-baroque-costume.png'); changeCircleColor('#00b4d8');"
+          />
+        </li>
+        <li>
+          <img
+            src="./Img/fun-3d-illustration-american-referee.png"
+            onclick="imgSlider('./Img/fun-3d-illustration-american-referee.png'); changeCircleColor('#007f5f');"
+          />
+        </li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
+  </body>
+</html>
