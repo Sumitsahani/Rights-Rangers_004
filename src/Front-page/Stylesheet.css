@@ -13,6 +13,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #e6d3a3;
 }
 
 header{
@@ -28,7 +29,7 @@ header{
 
 .logo{
     position: relative;
-    width: 80px;
+    width: 120px;
 }
 
 .content .textBox h2 span {
@@ -89,6 +90,39 @@ header ul li a {
 header ul li {
     list-style: none;
 }
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #e6d3a3;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    background-color: #e6d3a3;
+  }
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
 
 .content {
     position: relative;
