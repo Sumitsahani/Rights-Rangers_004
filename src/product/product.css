@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body{
+            background-color: #e6d3a3;
+        }
+        .container{
+            width: 1300px;
+            margin: auto;
+        }
+        /* section-1 */
+        .video-section {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 40vh;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* section-2 */
+        section.two div.products{
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(300px, 1fr));
+            place-items: center;
+        }
+        section.two header h1 {
+            font-size: 2.5em;
+            font-family: "Noto Sans JP", sans-serif;
+            margin: 15px 0px;
+            text-align: center;
+        }
+        .card1{
+            margin: 50px 0px;
+            width: 280px;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            /* rgba(122, 61, 0, 0.479)  rgba(129, 65, 0, 0.2)*/
+            background-color: rgba(122, 61, 0, 0.479);
+            border-radius: 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition:  transform 2s;
+        }
+        .card1:hover{
+            transform: translate(0px, -5px);
+        }
+        .card1>div.img>img{
+            width: 100%;
+            height: 170px;
+            border-radius: 12px 12px 0px 0px;
+            transition: transform 1s;
+        }
+        .card1>div.img>img:hover{
+            transform: scale(1.05) rotate(3deg);
+            border-radius: 10px;
+        }
+        .card1>div.description{
+            padding: 10px;
+        }
+        .card1>div.description>p{
+            text-align: center;
+            overflow: hidden;
+        }
+        .card1>div.description>p:nth-of-type(1){
+            font-size: 18px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+        .card1>div.description>p:nth-of-type(2){
+            margin-bottom: 10px;
+            height: 80px;
+        }
+        .card1>div.description>p>span.mrp{
+            text-decoration: line-through;
+            color: rgb(85, 85, 85);
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .card1>div.description>p>span.offer{
+            font-size: 18px;
+            font-weight: bolder;
+            margin-left: 10px;
+        }
+        .card1>div.description>button{
+            width: 100%;
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 15px;
+            font-weight: bolder;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+        .card1>div.description>button:hover{
+            /* #0d1010,#e6d3a3,#91972a */
+            background-color: #e6d3a3; 
+        }
+        /* section-3 */
+        section.three>.container{
+            height: 30vh;
+            background-image: url(https://i.pinimg.com/originals/1b/e1/b8/1be1b8df06dd6c392696589402cf26af.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        section.three div.head{
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 75px;
+        }
+        /* section-4 */
+        section.four header h1 {
+            font-size: 2.5em;
+            font-family: "Noto Sans JP", sans-serif;
+            margin: 15px 0px;
+            text-align: center;
+        }
+        section.four .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            place-items: center;
+        }
+        section.four .card2 {
+            background: #e6d3a3;
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            transition: transform 0.3s;
+        }
+        section.four .card2:hover {
+            transform: translateY(-10px);
+        }
+        section.four .card2 div.img {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+        section.four .card2 div.img>img{
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+        }
+        .card2>div.img>img:hover{
+            transform: scale(1.1);
+            border-radius: 10px;
+        }
+        section.four .card2>div.description h2 {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        section.four .card2>div.description>p:nth-of-type(1){
+            height: 70px;
+            font-size: 1em;
+            color: #1f1f1f;
+        }
+        section.four .card2>div.description .price {
+            font-size: 1.25em;
+            color: #111111;
+            margin-top: 10px;
+        }
+        .card2>div.description>button{
+            width: 100%;
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 15px;
+            font-weight: bolder;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+        .card2>div.description>button:hover{
+            /* #0d1010,#e6d3a3,#91972a */
+            background-color: rgba(122, 61, 0, 0.479); 
+        }
