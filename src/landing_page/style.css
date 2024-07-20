@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 /* section 0 */
-nav{
+/* nav{
   background: rgba( 255, 255, 255, 0.4 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 5px );
@@ -84,7 +84,119 @@ nav li:first-child{
   .sidebar{
     width: 100%;
   }
+} */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6d3a3;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #ddd;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: black;
+  transform: scale(1.1); /* Example animation: scale up slightly */
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    padding: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 305px) {
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 0.8rem;
+  }
+}
+
+
+
 
 
 
@@ -279,43 +391,52 @@ nav li:first-child{
 
 @media (max-width: 576px) {
   #main img {
-    height: 300px;
-    width: 240px;
+    height: 700px;
+    width: 360px;
   }
 
   #scroll-div h1,
   #scroll-div2 h1,
   #scroll-div3 h1 {
-    font-size: 40px;
+    font-size: 100px;
   }
 
   #text {
-    font-size: 20px;
+    font-size: 35px;
+    position: absolute;
+    top: 30px;
+    /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 @media (max-width: 400px) {
   #main img {
-    height: 200px;
-    width: 160px;
+    height: 600px;
+    width: 360px;
   }
 
   #scroll-div h1,
   #scroll-div2 h1,
   #scroll-div3 h1 {
-    font-size: 30px;
+    font-size: 100px;
   }
 
   #text {
-    font-size: 16px;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-
 /* SECTION 2 DAY 2 */
 
 /* Parallax effect and layout */
 .parallax {
-  background-image: url('https://images.unsplash.com/photo-1561794192-c5b9aeaa3b5a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FmZSUyMGhvdXNlfGVufDB8fDB8fHww');
+  background-image: url('https://images.pexels.com/photos/974382/pexels-photo-974382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -575,20 +696,21 @@ body {
     font-size: 1.5em;
   }
 }
-
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .menu-item {
-    width: 70px;
+      width: 45%;
   }
+}
 
-  .menu-container h1 {
-    font-size: 1.25em;
+@media (max-width: 480px) {
+  .menu-item {
+      width: 90%;
   }
 }
 
 /* section 4 */
-
-/* King Deals of the Day Section */
+/* SIP DEALS OF THE DAY */
+/* Main Styles */
 .deals-container {
   text-align: center;
   padding: 20px;
@@ -608,8 +730,8 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 20px 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
   background-color: #e6d3a3;
 }
 
@@ -618,24 +740,22 @@ body {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-width: 280px; /* Adjusted for smaller screens */
-  max-width: 80%;
+  width: 280px; /* Fixed width for all cards */
   text-align: center;
-  
   scroll-snap-align: center;
 }
 
 .deal-item img {
   width: 100%;
+  height: 200px; /* Fixed height for images */
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: cover; /* Maintain aspect ratio */
   transition: transform 0.3s ease;
 }
 
-.deal-item img:hover{
+.deal-item img:hover {
   transform: translateY(10px);
 }
-
 
 .deal-item p {
   margin-top: 10px;
@@ -644,7 +764,6 @@ body {
   color: #6f1a07;
 }
 
-
 .deal-item .order-now {
   display: block;
   margin: 10px 0;
@@ -652,8 +771,7 @@ body {
   color: #000;
 }
 
-.deal-item .deal-code
- {
+.deal-item .deal-code {
   display: block;
   margin: 10px 0;
   font-size: 1em;
@@ -668,13 +786,10 @@ body {
   border-radius: 5px;
   text-decoration: none;
 }
-.deal-item .order-now:hover{
+
+.deal-item .order-now:hover {
   background-color: #d0d562;
 }
-
-/* .deal-item:hover {
-  transform: translateY(-10px);
-} */
 
 .explore-menu {
   display: inline-block;
@@ -687,15 +802,20 @@ body {
   font-size: 1.2em;
 }
 
-.explore-menu:hover{
-  background-color: #e8a136 ;
+.explore-menu:hover {
+  background-color: #e8a136;
 }
 
 /* Media Queries */
 @media (max-width: 992px) {
+  .deals-items {
+    flex-direction: column;
+    align-items: center; /* Center the cards */
+  }
+
   .deal-item {
-    min-width: 220px;
-    max-width: 70%;
+    width: 90%; /* Ensure all cards have the same width */
+    margin-bottom: 20px;
   }
 
   .deals-container h1 {
@@ -705,8 +825,7 @@ body {
 
 @media (max-width: 768px) {
   .deal-item {
-    min-width: 180px;
-    max-width: 80%;
+    width: 80%;
   }
 
   .deals-container h1 {
@@ -716,8 +835,17 @@ body {
 
 @media (max-width: 576px) {
   .deal-item {
-    min-width: 140px;
-    max-width: 90%;
+    width: 90%;
+  }
+
+  .deal-item p,
+  .deal-item .deal-code,
+  .deal-item .order-now {
+    font-size: 0.8em;
+  }
+
+  .deal-item .order-now {
+    padding: 3px 5px;
   }
 
   .deals-container h1 {
@@ -727,8 +855,7 @@ body {
 
 @media (max-width: 400px) {
   .deal-item {
-    min-width: 120px;
-    max-width: 100%;
+    width: 100%;
     padding: 5px;
   }
 
@@ -747,12 +874,13 @@ body {
   }
 }
 
+
 /* section 5 */
 
 /* Video Section */
 .video-section {
   position: relative;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh; 
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -788,10 +916,9 @@ body {
   color: white;
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
   .video-section {
-    height: 80vh; /* Adjusted height for smaller screens */
+    height: 80vh;
   }
 }
 
@@ -874,9 +1001,7 @@ a:link, a:active, a:visited, a:hover {
   grid-row: 1; /* Span across one row */
   background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-position-x: 15rem; /* Adjusted position */
-  height: 200px;
-  
+  background-position-x: 15rem; /* Adjusted position */ 
 }
 
 .div2 {
@@ -934,19 +1059,30 @@ a:link, a:active, a:visited, a:hover {
 
 .detbox .name {
   color: hsl(0, 0%, 81%);
-  font-size: 0.7rem; /* Adjusted font size */
+  font-size: 0.9rem;
+  /* Adjusted font size */
   margin-bottom: 0.1rem;
   font-weight: 600;
-}
-
-.detbox .name.dark {
-  color: #49505A;
 }
 
 .detbox .designation {
   color: hsl(0, 0%, 81%);
   opacity: 50%;
-  font-size: 0.6rem; /* Adjusted font size */
+  font-size: 0.8rem;
+  /* Adjusted font size */
+}
+
+.review p {
+  font-size: 0.9rem;
+  /* Adjusted font size */
+  color: #F3DEFF;
+  font-weight: 500;
+  opacity: 50%;
+  line-height: 1.5;
+}
+
+.detbox .name.dark {
+  color: #49505A;
 }
 
 .detbox .designation.dark {
@@ -965,13 +1101,7 @@ a:link, a:active, a:visited, a:hover {
   color: #4B5258;
 }
 
-.review p {
-  font-size: 0.7rem; /* Adjusted font size */
-  color: #F3DEFF;
-  font-weight: 500;
-  opacity: 50%;
-  line-height: 1.5;
-}
+
 
 .review.dark p {
   color: #0e0e0e;

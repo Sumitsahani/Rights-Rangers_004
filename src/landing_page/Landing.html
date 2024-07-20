@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parallax Header</title>
   <link rel="stylesheet" href="style.css">
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <!-- section 0 nav -->
-  <nav>
+  <!-- <nav>
     <ul class="sidebar">
       <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
       <li><a href="#">Blog</a></li>
@@ -28,8 +33,39 @@
       <li class="hideOnMobile"><a href="#">Login</a></li>
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
     </ul>
-  </nav>
+  </nav> -->
+  <!-- <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <img id="logo" src="./output-onlinegiftools.gif"/>
 
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Product</a></li>
+          <li><a href="#" class="nav__link">Teams</a></li>
+          <li><a href="#" class="nav__link">Moments</a></li>
+          <li><a href="#" class="nav__link">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header> -->
+
+  <nav class="navbar">
+    <img class="logo" src="./output-onlinegiftools.gif" alt="">
+    <ul class="nav-links">
+        <li><a href="../Front-page/Index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="../Gallery-page/Index.html">Moments</a></li>
+        <li><a href="../product/index.html">Product</a></li>
+        <li><a href="../Teams/Index.html">Team</a></li>
+    </ul>
+</nav>
 
 
 
@@ -297,13 +333,17 @@
 </body>
 <script src="https://kit.fontawesome.com/26ffc47dd2.js" crossorigin="anonymous"></script>
 <script>
-  function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
-  }
-  function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-  }
+  const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show-menu");
+      toggle.classList.toggle("show-icon");
+    });
+  };
+  showMenu("nav-toggle", "nav-menu");
+
+
+  
 </script>
 </html>
