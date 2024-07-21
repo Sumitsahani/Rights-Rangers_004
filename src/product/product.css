@@ -3,6 +3,10 @@
             background-color: #e6d3a3;
         }
 
+        *{
+            font-family: monument;
+        }
+
 
         body {
             margin: 0;
