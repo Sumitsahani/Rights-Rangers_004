@@ -26,6 +26,8 @@ To get started with the project, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Sumitsahani/Rights-Rangers_004
+
+2. **Directory Structure**:
 ```
 cafe-serene/
 │
