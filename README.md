@@ -26,6 +26,7 @@ To get started with the project, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Sumitsahani/Rights-Rangers_004
+```
 cafe-serene/
 │
 ├── index.html        # Front Page
@@ -42,3 +43,4 @@ cafe-serene/
 └── js/
     └── main.js       # Main JavaScript file
 
+```
