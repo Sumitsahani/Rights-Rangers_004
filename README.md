@@ -10,16 +10,16 @@ Product Page: A showcase of our carefully curated menu and unique offerings.
 About Us Page: Meet the people behind Café Serene – the passionate team that makes it all possible.
 Moments Page: Relive the special moments and events that capture the heart of our café.
 Sign-Up Page: Join our community and stay updated with the latest from Café Serene.
-🎨 Tech Stack
+**🎨 Tech Stack**
 HTML: Structure and content of the website.
 CSS: Styling, layout, and responsive design.
 JavaScript: Dynamic interactions and functionality.
-👥 Team Members
-Sumit Kumar Sahani (Team Lead)
-Prakash Singh (Team Member)
-Pradyumna Jadav (Team Member)
-Rahul Rajeeven (Mentor)
-🚀 Getting Started
+**👥 Team Members**
+--Sumit Kumar Sahani (Team Lead)
+--Prakash Singh (Team Member)
+--Pradyumna Jadav (Team Member)
+--Rahul Rajeeven (Mentor)
+**🚀 Getting Started**
 Follow the steps below to set up the project locally:
 
 1. Clone the Repository
